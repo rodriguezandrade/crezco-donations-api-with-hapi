@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "b23b97ae-b303-43ff-b5ea-3e8a711a34f0",
+		"name": "crezco donation api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "35069209"
+	},
+	"item": [
+		{
+			"name": "paymentIntent",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currency\": \"usd\",\r\n  \"unit_amount\": 1000,\r\n  \"recurring\": {\r\n    \"interval\": \"month\"\r\n  },\r\n  \"product_data\": {\r\n    \"name\": \"testing recurring price\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/v2/create-price"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "price",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currency\": \"mxn\",\r\n  \"unit_amount\": 1000,\r\n  \"recurring\": {\r\n    \"interval\": \"month\"\r\n  },\r\n  \"product_data\": {\r\n    \"name\": \"testing recurring price\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/v2/create-price"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "crezco-donations-api-with-hapi",
+    "description": "",
+    "version": "1.0.0",
+    "author": "Crezco Foundation <crezco@outlook.es>",
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/fcrezco/crezco-donations-api-with-hapi.git"
+    },
+    "bugs": "http://github.com/fcrezco/crezco-donations-api-with-hapi/issues",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "dependencies": {
+        "@hapi/boom": "^10.0.0",
+        "@hapi/hapi": "^21.0.0",
+        "hapi-openapi": "^1.0.0",
+        "stripe": "^15.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "eslint": "^9.0.0",
+        "globals": "^15.0.0",
+        "hapi-pino": "^12.1.0",
+        "swagmock": "^1.0.0"
+    },
+    "scripts": {
+        "prestart": "echo 'Ensure you add the STRIPE_API_KEY var'",
+        "start": "node ./src/server.js",
+        "start:dev": "SET STRIPE_API_KEY=sk_test_51OcYzaCpxR0GNX12BWo7Pt0YmnMwDTFAUhoiWH5VHyrh07pjurhdaauGpqMLJJYItaH6ouRe8tWry00VmRJHYceI00XyYIs3tV & npm start",
+        "test": "echo 'nothing to test'",
+        "cover": "istanbul cover tape -- 'tests/**/*.js'",
+        "lint": "eslint .",
+        "regenerate": "yo swaggerize:test --framework hapi --apiPath './config/swagger.json'"
+    },
+    "generator-swaggerize": {
+        "version": "4.1.0"
+    },
+    "main": "./src/server"
+}
