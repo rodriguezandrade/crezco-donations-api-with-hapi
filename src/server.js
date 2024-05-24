@@ -7,7 +7,7 @@ const Path = require('path');
 const init = async function() {
     const server = new Hapi.Server({
         host: 'localhost',
-        port: 3000,
+        port: 8080,
         debug: false, // disable Hapi debug console logging
     });
 
