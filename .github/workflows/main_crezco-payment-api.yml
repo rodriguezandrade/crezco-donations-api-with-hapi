@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         push: true
-        tags: ${{ secrets.AzureAppService_ContainerUsername_ace3d78f72b4408ba8c61bfb3ae2e185 }}/crezco-payment-api:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_ace3d78f72b4408ba8c61bfb3ae2e185 }}/crezco-payment-api:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
