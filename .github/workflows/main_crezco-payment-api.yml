@@ -27,10 +27,10 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_6119e8a8bba54c6eb0c178029b518149 }}
 
     - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v5
       with:
         push: true
-        tags: docker.io/${{ secrets.AzureAppService_ContainerUsername_ace3d78f72b4408ba8c61bfb3ae2e185 }}/crezco-payment-api:${{ github.sha }}
+        tags: ${{ secrets.AzureAppService_ContainerUsername_ace3d78f72b4408ba8c61bfb3ae2e185 }}/crezco-payment-api:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
